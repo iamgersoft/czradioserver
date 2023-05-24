@@ -4,7 +4,7 @@ if [ -a "/etc/czserver/czradio.xml" ]
 then
   printf "File exists. Skipping.\n"
 else
-  echo "File does not exists. Creating...\n"
+  echo "File does not exist. Creating...\n"
   envsubst </etc/czserver/czserver-template.xml >/etc/czserver/czradio.xml
 fi
 
