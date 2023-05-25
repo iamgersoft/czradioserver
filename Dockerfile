@@ -13,4 +13,6 @@ RUN apk update \
     && apk add --no-cache icecast gettext \
     && chmod +x /usr/bin/czradio.sh
 
+EXPOSE 8000
+
 ENTRYPOINT ["/usr/bin/czradio.sh"]
