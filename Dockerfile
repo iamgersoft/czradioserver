@@ -1,4 +1,4 @@
-FROM alpine:3
+FROM alpine:3.18
 
 ENV SOURCE_PASSWORD="" \
     RELAY_PASSWORD="" \
@@ -8,7 +8,9 @@ ENV SOURCE_PASSWORD="" \
 COPY czradio.sh /usr/bin/czradio.sh
 COPY czserver-template.xml /etc/czserver/czserver-template.xml
 
-RUN apk add --no-cache icecast gettext && \
-    chmod +x /usr/bin/czradio.sh
+RUN apk update \
+    && apk upgrade \
+    && apk add --no-cache icecast gettext \
+    && chmod +x /usr/bin/czradio.sh
 
 ENTRYPOINT ["/usr/bin/czradio.sh"]

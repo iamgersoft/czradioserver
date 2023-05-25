@@ -1,10 +1,10 @@
 version: "3"
 # docker build -t gersoft/czradioserver:1.0.0 .
 # docker run --rm -i -p 8000:8000 SOURCE_PASSWORD=mysrcpwd -e RELAY_PASSWORD=myrlypw -e ADMIN_USER=thisuser -e ADMIN_PASSWORD=myadminpw -t gersoft/czradioserver:1.0.0
-# gersoft/czradioserver:1.0.0 image has not been uploaded to my Docker Hub repository... yet ;)
+# gersoft/czradioserver:1.0.0 image has not been pushed to my Docker Hub repository... yet ;)
 
 services:
-  picam:
+  czradioserver:
     container_name: czradioserver
     image: gersoft/czradioserver:1.0.0
     ports:
